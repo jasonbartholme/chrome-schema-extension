@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <div class="title-row">
+      <strong>Schema Validator</strong>
+      <label class="mode">
+        <span id="mode-label">Loose</span>
+        <input type="checkbox" id="strict-toggle" title="Toggle strict/loose validation">
+      </label>
+    </div>
+    <div class="summary" id="summary">…</div>
+  </header>
+
+  <main id="results"><div class="empty">Loading…</div></main>
+
+  <section id="suggestions-section" hidden>
+    <h2>Suggestions <span class="muted">(based on page content)</span></h2>
+    <div id="suggestions"></div>
+  </section>
+
+  <dialog id="json-dialog">
+    <div class="dialog-head">
+      <span id="dialog-title">JSON</span>
+      <button id="dialog-close" aria-label="Close">✕</button>
+    </div>
+    <pre id="dialog-body"></pre>
+    <div class="dialog-foot">
+      <button id="dialog-copy">Copy JSON</button>
+    </div>
+  </dialog>
+
+  <script src="validator.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
